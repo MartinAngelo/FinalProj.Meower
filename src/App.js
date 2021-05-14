@@ -1,25 +1,80 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import"./Css/login.css"
+import"./Css/nav.css"
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Redirect,
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React, { useState, useEffect } from "react"
 
-export default App;
+/**Pages */
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import NotFound from "./pages/404";
+import Login from "./pages/login";
+import Register from "./pages/Register";
+import Messages from "./pages/Messages";
+
+
+
+
+
+/**Route*/
+import PrivateRoute from  "./Routers/PrivateRoute";
+import PublicRoute from  "./Routers/PublicRoute";
+
+/**Firebase */
+import firebase from "./utils/firebase";
+
+
+
+export default function App() {
+  //loading
+    const [state, setState] = useState({
+        isAuth: false,
+        isLoading: true,
+    })
+
+
+
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                setState({ isAuth: true, isLoading: false })
+            } else {
+                //NO USER IS SIGN IN
+                setState({ isAuth: false, isLoading: false })
+            }
+            console.log(user)
+        });
+    }, [])
+
+    if (state.isLoading) {
+        return <p>LOADING...</p>
+    }
+
+
+    return (
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Redirect to="/login" exact/>
+            </Route>
+            
+            <PublicRoute component={Login} isAuth={state.isAuth}restricted={true}  path="/login" exact />
+            <PublicRoute component={Register} isAuth={state.isAuth}restricted={true}  path="/register" exact/>
+
+            <PrivateRoute component={Messages} isAuth={state.isAuth} path="/messages" exact/>
+            <PrivateRoute component={Home} isAuth={state.isAuth} path="/home" exact/>
+            <PrivateRoute component={Profile} isAuth={state.isAuth} path="/profile"/>
+
+            <Route component={NotFound} />
+          </Switch>
+
+          
+        </Router>
+      );
+    }
