@@ -1,12 +1,15 @@
 import React from "react";
 import Nav from "../Components/nav";
 
+import bg from '../pic/bg.jpg'
+
 export default function Home() {
   return (
-    <div>
-       <Nav />
-      <h1>HOME </h1>
-      <p>Welcome User</p>
+    <div className="bg">
+      <Nav />
+      <img src={bg} width="100%" height="100%" />
+
+
     </div>
   );
 }

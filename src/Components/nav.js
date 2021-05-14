@@ -15,14 +15,14 @@ export default function nav() {
 
 return (
     <div class="navigate">
-        <h1 class="logo">faceboot</h1>
+        <h1 class="logo">Webpage</h1>
         <ul>
             <li><Link to="/home"> HOME </Link></li>
             <li><Link to="/Messages">MESSAGES</Link></li>
-            <li><Link to="/notifications">NOTIFICATIONS</Link></li>
+            <li><Link to="/notifications">ABOUT</Link></li>
             <li><Link to="/profile">PROFILE</Link></li>
             <li>
-              <button onClick={signout}>SIGN OUT</button>
+              <button class="sign" onClick={signout}>SIGN OUT</button>
             </li>
            
         </ul>
