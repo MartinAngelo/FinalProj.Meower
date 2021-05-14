@@ -44,7 +44,7 @@
     list-style-type: none;
     padding: 0;
     overflow: hidden;
-    background-color: #3b5998;
+    background: linear-gradient(to right, #de48b5 0%,#0097ff 100%); 
   }
   
   ul {
@@ -103,7 +103,7 @@
   .tag{
     text-align: center;
     font-size: 15px;
-    color: #517ebd;
+    color: #51bdab;
   
   }
   
