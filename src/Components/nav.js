@@ -18,7 +18,7 @@ return (
         <h1 class="logo">Webpage</h1>
         <ul>
             <li><Link to="/home"> HOME </Link></li>
-            <li><Link to="/Messages">MESSAGES</Link></li>
+            <li><Link to="/events">EVENTS</Link></li>
             <li><Link to="/notifications">ABOUT</Link></li>
             <li><Link to="/profile">PROFILE</Link></li>
             <li>

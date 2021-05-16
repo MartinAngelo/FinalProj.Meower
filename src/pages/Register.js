@@ -88,7 +88,7 @@ export default function Register() {
         <Link to="./login">Login</Link>
       </div>
 
-      <div class="right"></div>
+      <div className="right"></div>
 
     </div >
 

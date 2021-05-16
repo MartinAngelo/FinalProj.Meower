@@ -5,7 +5,7 @@ export default function Messages() {
     return (
         <div>
             <Nav />
-            <h1>messages</h1>
+            <h1 className="welcome">Events</h1>
         </div>
     )
 }

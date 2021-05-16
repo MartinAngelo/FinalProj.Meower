@@ -26,7 +26,7 @@ export default function Profile() {
     return (
         <div>
             <Nav />
-            <p class="welcome">Welcome   {state.user ? state.user.email : "null"}</p>
+            <h1 class="welcome">Welcome   {state.user ? state.user.email : "null"}</h1>
             <p class="tag">Account Details</p>
             
         </div>

@@ -5,9 +5,9 @@ export default function NotFound () {
     return (
         <div>
             <Nav />
-            <h1>404 Not Found</h1>
-            <p>
-                This Page is Not Available
+           
+            <p className="welcome">
+            404 Not Found <br />This Page is Not Available
             </p>
         </div>
     )
