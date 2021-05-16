@@ -29,10 +29,11 @@ export default function Profile() {
             <Nav />
             <div className="dps">
                 <img src={dp} alt="Logo" />
-            
+                </div>
             <h1 class="welcome">Welcome   {state.user ? state.user.email : "null"}</h1>
-            <p class="tag">Account Details</p>
-            </div>
+            <p class="tag">Email : {state.user ? state.user.email : "null"}</p>
+          
+            
 
         </div>
     )

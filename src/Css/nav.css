@@ -87,14 +87,14 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    width:20%;
+    width:15%;
 
     
 }
   .welcome{
     font-size: 25px;
     font-weight: bold;
-    margin-top: 9%;
+    margin-top: 0%;
     text-align: center;
     color: rgb(83, 110, 145);
   }
