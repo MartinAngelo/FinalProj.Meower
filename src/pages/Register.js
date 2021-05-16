@@ -84,8 +84,7 @@ export default function Register() {
           <button onClick={register}>Register</button>
         </div>
 
-
-        <Link to="./login">Login</Link>
+        <p>Already have account? <Link to="./login">Log in</Link></p>
       </div>
 
       <div className="right"></div>

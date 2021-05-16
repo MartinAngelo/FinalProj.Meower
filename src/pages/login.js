@@ -85,7 +85,7 @@ export default function Login() {
         </div>
 
 
-        <Link to="./register">Register</Link>
+        <p>Don't have an account? <Link to="./register">Sign in</Link></p>
       </div>
 
       <div className="right"></div>
