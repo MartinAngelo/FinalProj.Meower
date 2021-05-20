@@ -56,6 +56,8 @@ export default function Login() {
     <div className="container">
       <div className="left">
         <div className="header">
+        <h1 className="animation a1">MovieFlix</h1>
+        <br />
           <h2 className="animation a1">Welcome Back</h2>
           <h4 className="animation a2">Log in to your account using email and password</h4>
         </div>
