@@ -10,7 +10,7 @@ export default function Messages() {
                 <ReactPlayer
                     className='player'
                     playing
-                    url={"https://www.youtube.com/watch?v=nWqQaLaOuxc"}
+                    url={"https://www.youtube.com/watch?v=dY29jgV4YYg"}
                     width='100%'
                     height='85%'
                 />

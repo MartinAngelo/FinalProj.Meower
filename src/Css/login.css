@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-  display: flex;
-  height : 100vh;
+  display         : flex;
+  height          : 100vh;
   background-color: #ffffff;
 }
 
@@ -39,7 +39,8 @@ body {
 
 
 
-.header>h2,h1 {
+.header>h2,
+h1 {
   margin: 0;
   color : #4f46a5;
 }
@@ -97,6 +98,7 @@ body {
   animation-duration : .4s;
   animation-fill-mode: both;
   animation-delay    : 2s;
+
 }
 
 .a1 {

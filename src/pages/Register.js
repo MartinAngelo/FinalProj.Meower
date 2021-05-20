@@ -52,8 +52,8 @@ export default function Register() {
     <div className="container">
       <div className="left">
         <div className="header">
-        <h1 className="animation a1">MovieFlix</h1>
-        <br />
+          <h1 className="animation a1">MovieFlix</h1>
+          <br />
           <h2 className="animation a1">Welcome New User</h2>
           <h4 className="animation a2">Create your Account</h4>
         </div>

@@ -7,25 +7,14 @@ export default function Home() {
   return (
     <div >
       <Nav />
-
-
-
       <div className="image">
         <img src={bg} width="100%" height="100%" alt="pic" />
-
-
-
         <h1 ><span>
           MovieFlix
           </span>
         </h1>
 
       </div>
-
-
-
-
-
     </div >
   );
 }

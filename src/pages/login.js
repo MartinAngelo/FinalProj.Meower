@@ -15,8 +15,6 @@ export default function Login() {
 
   });
 
-
-
   const handleChange = (prop) => (e) => {
     setPayload({ ...payload, [prop]: e.target.value });
   };
@@ -26,8 +24,6 @@ export default function Login() {
 
     if (!payload.email || !payload.password) {
       alert("Please Complete all fields!")
-
-
     } else {
       //backend
       firebase
@@ -43,12 +39,7 @@ export default function Login() {
           var errorMessage = error.message;
           alert(errorMessage)
         });
-
-
-
     }
-
-
   };
 
   return (
@@ -62,8 +53,6 @@ export default function Login() {
           <h4 className="animation a2">Log in to your account using email and password</h4>
         </div>
         <div className="form">
-
-
           <label htmlFor="username">Email</label>
           <input
             type="email"
@@ -79,14 +68,8 @@ export default function Login() {
             onChange={handleChange("password")}
             value={payload.password}
           />
-
-
-
-
           <button className="animation a6" onClick={register}>LOGIN</button>
         </div>
-
-
         <p>Don't have an account? <Link to="./register">Sign in</Link></p>
       </div>
 
