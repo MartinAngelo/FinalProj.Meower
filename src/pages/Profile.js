@@ -25,15 +25,17 @@ export default function Profile() {
 
 
     return (
-        <div>
+        <div className="profilebg">
             <Nav />
             <div className="dps">
                 <img src={dp} alt="Logo" />
-                </div>
+            </div>
+
+
             <h1 class="welcome">Welcome   {state.user ? state.user.email : "null"}</h1>
             <p class="tag">Email : {state.user ? state.user.email : "null"}</p>
-          
-            
+
+
 
         </div>
     )

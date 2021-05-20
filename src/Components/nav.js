@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+
 import firebase from "../utils/firebase";
 
 export default function nav() {
@@ -15,11 +17,12 @@ export default function nav() {
 
 return (
     <div class="navigate">
-        <h1 class="logo">Webpage</h1>
+        <h1 class="logo">MovieFlix</h1>
+        
         <ul>
             <li><Link to="/home"> HOME </Link></li>
-            <li><Link to="/events">EVENTS</Link></li>
-            <li><Link to="/notifications">ABOUT</Link></li>
+            <li><Link to="/events">POPULAR</Link></li>
+            <li><Link to="/About">ABOUT</Link></li>
             <li><Link to="/profile">PROFILE</Link></li>
             <li>
               <button class="sign" onClick={signout}>SIGN OUT</button>
