@@ -3,6 +3,7 @@ import "./Css/login.css"
 import "./Css/nav.css"
 import "./Css/messages.css"
 import "./Css/home.css"
+import "./Css/events.css"
 import {
   BrowserRouter as Router,
   Route,
