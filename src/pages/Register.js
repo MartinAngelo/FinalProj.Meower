@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import pusa from '../pic/pusa1.png'
 
 import firebase from "../utils/firebase";
 
@@ -52,8 +53,9 @@ export default function Register() {
     <div className="container">
       <div className="left">
         <div className="header">
-          <h1 className="animation a1">MovieFlix</h1>
-          <br />
+        <img src={pusa} className="pusa" alt="logo" />
+          <h1 className="animation a1">Meower</h1>
+        
           <h2 className="animation a1">Welcome New User</h2>
           <h4 className="animation a2">Create your Account</h4>
         </div>
@@ -83,7 +85,7 @@ export default function Register() {
             value={payload.confirmPass}
           />
 
-          <button onClick={register}>Register</button>
+          <button className="animation a6" onClick={register}>Register</button>
         </div>
 
         <p>Already have account? <Link to="./login">Log in</Link></p>

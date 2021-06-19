@@ -17,11 +17,11 @@ export default function nav() {
 
 return (
     <div class="navigate">
-        <h1 class="logo">MovieFlix</h1>
+        <h1 class="logo">Meower</h1>
         
         <ul>
             <li><Link to="/home"> HOME </Link></li>
-            <li><Link to="/events">POPULAR</Link></li>
+            <li><Link to="/events">TIMELINE</Link></li>
             <li><Link to="/About">ABOUT</Link></li>
             <li><Link to="/profile">PROFILE</Link></li>
             <li>

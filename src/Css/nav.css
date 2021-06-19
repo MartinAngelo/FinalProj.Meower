@@ -23,7 +23,8 @@
   list-style-type: none;
   padding        : 0;
   overflow       : hidden;
-  background     : linear-gradient(to right, #01568f 0%, #000000 100%);
+  background     : #ff8941;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 ul {
@@ -63,7 +64,7 @@ ul button:hover {
 }
 
 li button:active {
-  background-color: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
+  background-color: #ff8941;
 }
 
 .logo {
