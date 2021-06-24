@@ -13,7 +13,7 @@ export default function PublicRoute({
             {...rest}
             component={(props) =>
                 isAuth && restricted ? (
-                    <Redirect to="/home" />
+                    <Redirect to="/timeline" />
                 ) : (
                     <Component {...props} />
 
