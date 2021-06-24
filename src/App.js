@@ -13,13 +13,17 @@ import {
 
 import React, { useState, useEffect } from "react"
 
+/*material-ui*/
+import { ThemeProvider } from "@material-ui/core";
+import theme from "./utils/theme";
+
 /**Pages */
-import Home from "./pages/Home";
+
 import Profile from "./pages/Profile";
 import NotFound from "./pages/404";
 import Login from "./pages/login";
 import Register from "./pages/Register";
-import events from "./pages/Events";
+import Timeline from "./pages/Timeline";
 import About from "./pages/About";
 
 
@@ -62,6 +66,10 @@ export default function App() {
 
 
   return (
+    
+    < ThemeProvider theme = { theme } >
+
+
     <Router>
       <Switch>
         <Route path="/" exact>
@@ -71,8 +79,8 @@ export default function App() {
         <PublicRoute component={Login} isAuth={state.isAuth} restricted={true} path="/login" exact />
         <PublicRoute component={Register} isAuth={state.isAuth} restricted={true} path="/register" exact />
 
-        <PrivateRoute component={events} isAuth={state.isAuth} path="/Events" exact />
-        <PrivateRoute component={Home} isAuth={state.isAuth} path="/home" exact />
+        <PrivateRoute component={Timeline} isAuth={state.isAuth} path="/Timeline" exact />
+       
         <PrivateRoute component={Profile} isAuth={state.isAuth} path="/profile" />
         <PrivateRoute component={About} isAuth={state.isAuth} path="/About" />
 
@@ -81,5 +89,6 @@ export default function App() {
 
 
     </Router>
+    </ThemeProvider >
   );
 }

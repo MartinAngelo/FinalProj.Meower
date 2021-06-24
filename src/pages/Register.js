@@ -53,9 +53,9 @@ export default function Register() {
     <div className="container">
       <div className="left">
         <div className="header">
-        <img src={pusa} className="pusa" alt="logo" />
+          <img src={pusa} className="pusa" alt="logo" />
           <h1 className="animation a1">Meower</h1>
-        
+
           <h2 className="animation a1">Welcome New User</h2>
           <h4 className="animation a2">Create your Account</h4>
         </div>
