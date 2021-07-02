@@ -6,7 +6,7 @@ export default function Messages() {
     return (
         <div>
             <Nav />
-       <h1>About page</h1>
+       <h1>NOTIFICATION page</h1>
        
 
 
