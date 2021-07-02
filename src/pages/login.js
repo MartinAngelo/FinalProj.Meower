@@ -76,7 +76,7 @@ export default function Login() {
           />
           <button className="animation a6" onClick={register}>LOGIN</button>
         </div>
-        <p>Don't have an account? <Link to="./register">Sign in</Link></p>
+        <p>Don't have an account? <Link to="./register">Sign up</Link></p>
       </div>
 
       <div className="right"></div>

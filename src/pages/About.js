@@ -7,6 +7,7 @@ export default function Messages() {
         <div>
             <Nav />
        <h1>About page</h1>
+       
 
 
         </div>
