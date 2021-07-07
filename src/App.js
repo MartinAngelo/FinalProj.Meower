@@ -24,7 +24,6 @@ import NotFound from "./pages/404";
 import Login from "./pages/login";
 import Register from "./pages/Register";
 import Timeline from "./pages/Timeline";
-import About from "./pages/About";
 
 
 
@@ -82,7 +81,7 @@ export default function App() {
         <PrivateRoute component={Timeline} isAuth={state.isAuth} path="/Timeline" exact />
        
         <PrivateRoute component={Profile} isAuth={state.isAuth} path="/profile" />
-        <PrivateRoute component={About} isAuth={state.isAuth} path="/About" />
+     
 
         <Route component={NotFound} />
       </Switch>

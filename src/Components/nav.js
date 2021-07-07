@@ -21,8 +21,7 @@ return (
         
         <ul>
            
-            <li><Link to="/timeline">HOME</Link></li>
-            <li><Link to="/About">NOTIFICATION</Link></li>
+            <li><Link to="/timeline">TIMELINE</Link></li>
             <li><Link to="/profile">PROFILE</Link></li>
             <li>
               <button class="sign" onClick={signout}>SIGN OUT</button>
