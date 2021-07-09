@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../Components/nav";
 import firebase from "../utils/firebase";
+
+import pusa2 from '../pic/pusa.png'
+
 import {
   makeStyles,
   Grid,
@@ -12,6 +15,7 @@ import {
   Typography,
   IconButton,
 } from "@material-ui/core";
+//import { width } from "@material-ui/system";//
 import { Delete as DeleteIcon } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -87,6 +91,7 @@ export default function Timeline() {
   const handleChange = (e) => {
     setPayload({ post: e.target.value });
   };
+
   const addPost = () => {
     db.collection("users")
       .doc(state.userUid)
@@ -128,11 +133,11 @@ export default function Timeline() {
       <Nav />
 
       <Grid container direction="column" spacing={2} alignItems="center">
-        ;
         <Grid item className={classes.card}>
           <Card>
             <CardContent>
               <Grid container spacing={2} alignItems="center" justify="center">
+              <img src={pusa2} className="pusa2" alt="logo2" />
                 <Grid item>
                   <TextField
                     variant="outlined"
