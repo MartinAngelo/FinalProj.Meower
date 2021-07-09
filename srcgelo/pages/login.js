@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 import pusa from '../pic/pusa1.png'
+
+
+
+
 
 import firebase from "../utils/firebase";
 
-export default function Register() {
+
+
+
+export default function Login() {
   const [payload, setPayload] = useState({
     email: "",
     password: "",
-    confirmPass: "",
-  });
 
-  //const history = useHistory();
+  });
 
   const handleChange = (prop) => (e) => {
     setPayload({ ...payload, [prop]: e.target.value });
@@ -20,23 +26,16 @@ export default function Register() {
   const register = (e) => {
     e.preventDefault();
 
-    if (!payload.email || !payload.password || !payload.confirmPass) {
+    if (!payload.email || !payload.password) {
       alert("Please Complete all fields!")
-
-    } else if (payload.password !== payload.confirmPass) {
-      alert("Password does not match!");
-    } else if (payload.password.length < 5) {
-      alert("Password should be at least 6 characters")
-
-
     } else {
       //backend
       firebase
         .auth()
-        .createUserWithEmailAndPassword(payload.email, payload.password)
+        .signInWithEmailAndPassword(payload.email, payload.password)
         .then((signedInUser) => {
-          //registered and signed in  
-          alert("Registered and signed in as " + signedInUser.user.email);
+          //signed in  
+          alert("Sign in as " + signedInUser.user.email);
           console.log(signedInUser.user);
         })
         .catch((error) => {
@@ -45,22 +44,23 @@ export default function Register() {
           alert(errorMessage)
         });
     }
-
-
   };
 
   return (
+
     <div className="container">
       <div className="left">
         <div className="header">
           <img src={pusa} className="pusa" alt="logo" />
-          <h1 className="animation a1">Meower</h1>
+          <br />
+          <h1 className="animation a1">Meower </h1>
 
-          <h2 className="animation a1">Welcome New User</h2>
-          <h4 className="animation a2">Create your Account</h4>
+
+
+          <h2 className="animation a1">Welcome Back</h2>
+          <h4 className="animation a2">Log in to your account using email and password</h4>
         </div>
         <div className="form">
-
           <label htmlFor="username">Email</label>
           <input
             type="email"
@@ -76,24 +76,18 @@ export default function Register() {
             onChange={handleChange("password")}
             value={payload.password}
           />
-
-          <label htmlFor="confirmPass">Confirm Password</label>
-          <input
-            type="password"
-            name="confirmPass"
-            onChange={handleChange("confirmPass")}
-            value={payload.confirmPass}
-          />
-
-          <button className="animation a6" onClick={register}>Register</button>
+          <button className="animation a6" onClick={register}>LOGIN</button>
         </div>
-
-        <p>Already have account? <Link to="./login">Log in</Link></p>
+        <p>Don't have an account? <Link to="./register">Sign up</Link></p>
       </div>
 
       <div className="right"></div>
 
     </div >
+
+
+
+
 
   );
 }

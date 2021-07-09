@@ -36,7 +36,7 @@ export default function Register() {
         .createUserWithEmailAndPassword(payload.email, payload.password)
         .then((signedInUser) => {
           //registered and signed in  
-          alert("Registered and signed in as " + signedInUser.user.email);
+          alert("Registered and sign in as " + signedInUser.user.email);
           console.log(signedInUser.user);
         })
         .catch((error) => {

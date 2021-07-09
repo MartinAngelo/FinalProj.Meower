@@ -33,7 +33,7 @@ export default function Login() {
         .signInWithEmailAndPassword(payload.email, payload.password)
         .then((signedInUser) => {
           //signed in  
-          alert("Sign in as " + signedInUser.user.email);
+          alert("Signed in as " + signedInUser.user.email);
           console.log(signedInUser.user);
         })
         .catch((error) => {
